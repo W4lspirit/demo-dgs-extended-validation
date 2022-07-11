@@ -6,7 +6,6 @@ import com.netflix.graphql.dgs.DgsQuery;
 import com.netflix.graphql.dgs.InputArgument;
 
 import java.util.List;
-import java.util.stream.Collectors;
 
 @DgsComponent
 public class ShowsDatafetcher {
