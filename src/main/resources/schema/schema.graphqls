@@ -1,0 +1,15 @@
+directive @Size(
+    min: Int = 1
+    max: Int = 1000
+    message: String = "graphql.validation.Size.message"
+) on ARGUMENT_DEFINITION | INPUT_FIELD_DEFINITION
+
+type Query {
+    showsMustSucceed(titleFilter: String!): [Show]
+    showsMustGoOn(titleFilter: String @Size): [Show]
+}
+
+type Show {
+    title: String
+    releaseYear: Int
+}
